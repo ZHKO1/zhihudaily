@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="favicon.icon">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<title>测试</title>
+	</head>
+	<body>
+		<div class = "header">
+			<div class = "container">
+				<h1>知乎日报</h1>
+			</div>
+		</div>
+		<div id="nav">
+			<a class="prev" href="javascript:void 0">
+				向前
+			</a>
+			<a class="next" href="javascript:void 0">
+				向后
+			</a>
+		</div>
 
-    <title>知乎日报</title>
-  </head>
-  <body>
-  init
-  </body>
+		<div class = "container">
+			<div class="row" id="content">
+				<div class="loading">等待中</div>
+			</div>
+		</div>
+		<script type="text/template" id="news-template">
+			<div class="col">
+				<a href="<%= share_url %>" target="blank">
+					<img src="<%= thumbnail %>" />
+					<div class="detail">
+						<h3 class="title"><%= title %></h3>
+					</div>
+				</a>
+			</div>
+		</script>
+
+		<script data-main="js/main" src="js/vendor/require-2.1.14.min.js"></script>
+	</body>
 </html>
