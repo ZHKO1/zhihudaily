@@ -9,7 +9,7 @@ define([
     el: '.header h1',
     
     initialize: function() {
-      this.listenTo(newsCollection, 'date:changed', this.updateTitle);
+      this.listenTo(newsCollection, 'date:changed', this.updateTitle); 
     },
     
     updateTitle: function(date) {

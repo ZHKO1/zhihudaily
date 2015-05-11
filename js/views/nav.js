@@ -1,4 +1,4 @@
-define([
+define([//define的第一个数组参数指明所要依靠的参数
   'jquery',
   'underscore',
   'backbone',
@@ -7,15 +7,13 @@ define([
 
   var NavView = Backbone.View.extend({
     el: '#nav',
-    
     events: {
       'click .prev': 'prevDay',
       'click .next': 'nextDay'
     },
-
-    initialize: function() {
+	initialize: function() {
       this.curdate = new Date();
-      this.listenTo(router, 'route:news', this.routeChanged);
+      //this.listenTo(router, 'route:news', this.routeChanged);
       
       $('body').keydown(function(e) {
         if(e.which == 37) { // left keypress

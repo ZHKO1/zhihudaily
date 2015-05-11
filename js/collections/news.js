@@ -8,7 +8,7 @@ define([
   var NewsCollection = Backbone.Collection.extend({
     model: NewsModel,
 
-    url: function(year, month, day) {
+    url: function(year, month, day) { //准备好要发起七牛请求的url
       var _url = 'http://7xin0n.com1.z0.glb.clouddn.com/api/2/news/';
       return _url + this.dateFormat(year, month, day);
     },
@@ -35,12 +35,6 @@ define([
       return resp.news;
     },
     
-
-    test:function(){
-      alert("Collection_test");
-    },
-
-
     dateFormat: function(year, month, day) {
       var date = new Date();
       var d = new Date(year, Number(month) - 1, 1 + Number(day));

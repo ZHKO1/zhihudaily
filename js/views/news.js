@@ -39,7 +39,7 @@ define([
     
     renderError: function(collection, resp, options) {
       newsCollection.trigger('date:changed');
-      
+	  
       if (resp.status === 404) {
         this.$el.html(
           '<div class="error">\

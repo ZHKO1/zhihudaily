@@ -1,5 +1,4 @@
 require.config({
-
   paths: {
     'jquery': [
       'http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min',
@@ -16,13 +15,11 @@ require.config({
     'then': 'vendor/then-0.1.0.min',
     'text': 'vendor/text'
   }
-
 });
+//先定义require的基本信息
 
 require([
   'app'
 ], function(App){
-
   App.initialize();
-
 });
