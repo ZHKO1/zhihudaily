@@ -1,3 +1,4 @@
+//Over~
 define([
   'jquery',
   'underscore',
@@ -12,7 +13,8 @@ define([
       var _url = 'http://7xin0n.com1.z0.glb.clouddn.com/api/2/news/';
       return _url + this.dateFormat(year, month, day);
     },
-    
+	
+    //每一次调用 fetch 从服务器拉取集合的模型数据时，parse都会被调用。 本函数接收原始 response 对象，返回可以 added（添加） 到集合的模型属性数组
     parse: function(resp) {
       if (!resp || !resp.news) {
         return [];

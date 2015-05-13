@@ -4,7 +4,7 @@ define([
   'backbone',
   'router'
 ], function($, _, Backbone, router) {
-  
+  //先加载router
   //这里负责对于操控模块的注册
   //比如click .pre click .next 还有就是点击的事情
 
@@ -16,7 +16,7 @@ define([
     },
 	initialize: function() {
       this.curdate = new Date();
-      //this.listenTo(router, 'route:news', this.routeChanged);
+      this.listenTo(router, 'route:news', this.routeChanged);
       
       $('body').keydown(function(e) {
         if(e.which == 37) { // left keypress
