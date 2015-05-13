@@ -9,6 +9,7 @@ define([
     el: '.header h1',
     
     initialize: function() {
+      //监听newscollection里date:changed的事
       this.listenTo(newsCollection, 'date:changed', this.updateTitle); 
     },
     

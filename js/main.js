@@ -16,7 +16,10 @@ require.config({
     'text': 'vendor/text'
   }
 });
-//先定义require的基本信息
+//先定义require的基本信息,先说明jquery和underscore和backbone是什么玩意儿。以后就知道了
+
+//加载现在文件夹里的app.js
+//这里要说明一下 define定义的模块可以被其他调用 require却不行
 
 require([
   'app'

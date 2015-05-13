@@ -7,15 +7,11 @@ define([
   var Router = Backbone.Router.extend({
     routes: {
 		//括号里表示可有可无
-		'(!/)': 'news_',
+		'(!/)': 'news',
 		'(!/)news/:year/:month/:day': 'news',
 		'*defAction': 'defAction'
 	},
 	
-    news_: function(year, month, day) {
-		alert("初始化");
-    },
-
     news: function(year, month, day) {
 		require([
 			'views/news'

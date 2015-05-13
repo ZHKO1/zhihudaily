@@ -1,9 +1,12 @@
-define([//define的第一个数组参数指明所要依靠的参数
+define([
   'jquery',
   'underscore',
   'backbone',
   'router'
 ], function($, _, Backbone, router) {
+  
+  //这里负责对于操控模块的注册
+  //比如click .pre click .next 还有就是点击的事情
 
   var NavView = Backbone.View.extend({
     el: '#nav',
@@ -39,7 +42,11 @@ define([//define的第一个数组参数指明所要依靠的参数
         + date.getFullYear() + '/'
         + (date.getMonth() + 1) + '/'
         + date.getDate();
-      
+      //???????????
+      //问题：如果我去掉
+      //this.listenTo(router, 'route:news', this.routeChanged);
+      //那么剩下来负责跳转的就是router.navigate(route, {trigger: true});这段代码
+      //这段代码有什么用？
       router.navigate(route, {trigger: true});
     },
     

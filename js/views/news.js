@@ -5,7 +5,8 @@ define([
   'collections/news',
   'views/title'
 ], function($, _, Backbone, newsCollection) {
-
+  //先加载'collections/news'和'views/title'
+  
   var IndexView = Backbone.View.extend({
     el: '#content',
     

@@ -4,7 +4,7 @@ define([
   'backbone',
   'models/news'
 ], function($, _, Backbone, NewsModel) {
-
+  //要先加载models的news
   var NewsCollection = Backbone.Collection.extend({
     model: NewsModel,
 

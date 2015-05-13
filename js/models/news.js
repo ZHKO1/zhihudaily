@@ -3,7 +3,7 @@ define([
   'underscore',
   'backbone'
 ], function($, _, Backbone) {
-
+  //最终加载的起点
   var NewsModel = Backbone.Model.extend({
     defaults: {
       image: '',
