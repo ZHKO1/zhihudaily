@@ -19,7 +19,7 @@ define([
 	initialize: function() {
 		var that = this;
 		var lastnumber = 0;
-	  var swiperH = new Swiper('.swiper-container-h', {
+		var swiperH = new Swiper('.swiper-container-h', {
 			paginationClickable: true,
 			spaceBetween: 20,
 			onSlideChangeEnd: function(swiper){
@@ -35,19 +35,10 @@ define([
 				lastnumber = swiper.translate;
 			}
 		});
-		
+		$("#wowsodoge").prepend('<div class="swiper-slide">Loading</div>');
+	  
     this.curdate = new Date();
     this.listenTo(router, 'route:news', this.routeChanged);
-		
-		/*
-    $('body').keydown(function(e) {
-      if(e.which == 37) { // left keypress
-         $('.prev').trigger('click');
-      } else if(e.which == 39) { // right keypress
-         $('.next').trigger('click');
-      }
-    });
-		*/
 	},
     
 	routeChanged: function(year, month, day) {
