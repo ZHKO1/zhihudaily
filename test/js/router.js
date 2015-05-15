@@ -16,9 +16,14 @@ define([
 		require([
 			'views/news'
 		], function(newsView) {
+			if(Backbone.swipering){
+				newsView.setElement("#content" + Backbone.swipering_number);
+			}
 			newsView.render(year, month, day);
 		});
     },
+	
+	
 
     defAction: function(permalink) {
       console.log('[router] 404: ' + permalink);
