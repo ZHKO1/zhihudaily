@@ -25,7 +25,7 @@ define([
 				var model = collection.at(i);
 				that.$el.append(that.template(model.attributes));
 			}
-		}, 2000 );
+		}, 500 );
 		
 		return that;
     },
@@ -60,7 +60,7 @@ define([
     },
     
     renderLoading: function() {
-      this.$el.html('<div class="loading"><div class="loading"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div></div>');
+      //this.$el.html('<div class="loading"><div class="loading"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div></div>');
     }
   });
 

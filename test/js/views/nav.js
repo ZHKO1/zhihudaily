@@ -10,7 +10,7 @@
   //比如click .pre click .next 还有就是点击的事情
 	Backbone.swipering = false;
 	Backbone.swipering_number = 1;
-	Backbone.swiper_pages = [];
+	Backbone.swiper_pages = {};
 	
   var NavView = Backbone.View.extend({
     el: '#nav',
