@@ -70,21 +70,23 @@
 					
 					if(lastnumber > swiper.translate){
 						$('.prev').trigger('click');
-						/*if($("#content" + Backbone.swipering_number).length){
-							var  predate = new Date(that.curdate);
-							predate.setDate(that.curdate.getDate() - 1);
-							predate = that.datetoString(predate);
-							swiper.prependSlide(that.template({row_id:'content' + predate}));
-						}*/
+						var  predate = new Date(that.curdate);
+						predate.setDate(that.curdate.getDate() + 1);
+						predate = that.datetoString(predate);
+						
+						if(!$("#content" + predate).length){
+							swiper.appendSlide(that.template({row_id:'content' + predate}));
+						}
 					}
 					else{
 						$('.next').trigger('click');
-						/*if($("#content" + Backbone.swipering_number).length){
 							var  nextdate = new Date(that.curdate);
-							nextdate.setDate(that.curdate.getDate() + 1);
+							nextdate.setDate(that.curdate.getDate() - 1);
 							nextdate = that.datetoString(nextdate);
-							swiper.appendSlide(that.template({row_id:'content' + nextdate}));
-						}*/	
+
+							if(!$("#content" + nextdate).length){
+								swiper.prependSlide(that.template({row_id:'content' + nextdate}));
+							}
 					}
 					lastnumber = swiper.translate;
 					
