@@ -17,7 +17,7 @@ define([
 			'views/news'
 		], function(newsView) {
 			if(Backbone.swipering){
-				newsView.setElement("#content" + Backbone.swipering_number);
+				newsView.setElement("#content" + year + month + day);
 			}
 			newsView.render(year, month, day);
 		});
