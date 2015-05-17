@@ -77,16 +77,18 @@
 						if(!$("#content" + predate).length){
 							swiper.appendSlide(that.template({row_id:'content' + predate}));
 						}
+						swiper.removeSlide(0);
 					}
 					else{
 						$('.next').trigger('click');
-							var  nextdate = new Date(that.curdate);
-							nextdate.setDate(that.curdate.getDate() - 1);
-							nextdate = that.datetoString(nextdate);
+						var  nextdate = new Date(that.curdate);
+						nextdate.setDate(that.curdate.getDate() - 1);
+						nextdate = that.datetoString(nextdate);
 
-							if(!$("#content" + nextdate).length){
-								swiper.prependSlide(that.template({row_id:'content' + nextdate}));
-							}
+						if(!$("#content" + nextdate).length){
+							swiper.prependSlide(that.template({row_id:'content' + nextdate}));
+						}
+						swiper.removeSlide(3);
 					}
 					lastnumber = swiper.translate;
 					
