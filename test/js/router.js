@@ -13,14 +13,19 @@ define([
 	},
 	
     news: function(year, month, day) {
-		require([
-			'views/news'
-		], function(newsView) {
-			if(Backbone.swipering){
-				newsView.setElement("#content" + year + month + day);
-			}
-			newsView.render(year, month, day);
-		});
+			require([
+				'views/news'
+			], function(newsView) {
+				if(Backbone.swipering){
+					newsView.setElement("#content" + year + month + day);
+				}
+				if($("#content" + year + month + day)[0].children.length == 1){
+					console.log($("#content" + year + month + day)[0].children);
+					console.log($("#content" + year + month + day)[0].children.length);
+					newsView.render(year, month, day);
+				}
+				
+			});
     },
 	
 	
