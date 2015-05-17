@@ -25,7 +25,7 @@ define([
 				var model = collection.at(i);
 				that.$el.append(that.template(model.attributes));
 			}
-		}, 500 );
+		}, 0 );
 		
 		return that;
     },
