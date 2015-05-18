@@ -23,6 +23,10 @@ define([
 			that.$el.html('');
 			for (var i = 0, l = collection.length; i < l; i++) {
 				var model = collection.at(i);
+				console.log(model.attributes.thumbnail);
+				model.attributes.thumbnail = model.attributes.thumbnail + "?imageView2/1/w/240/q/51";
+				console.log(model.attributes.thumbnail);
+				
 				that.$el.append(that.template(model.attributes));
 			}
 		}, 0 );

@@ -18,10 +18,13 @@ define([
 			], function(newsView) {
 				if(Backbone.swipering){
 					newsView.setElement("#content" + year + month + day);
+					if($("#content" + year + month + day)[0].children.length == 1){
+						console.log($("#content" + year + month + day)[0].children);
+						console.log($("#content" + year + month + day)[0].children.length);
+						newsView.render(year, month, day);
+					}
 				}
-				if($("#content" + year + month + day)[0].children.length == 1){
-					console.log($("#content" + year + month + day)[0].children);
-					console.log($("#content" + year + month + day)[0].children.length);
+				else{
 					newsView.render(year, month, day);
 				}
 				
