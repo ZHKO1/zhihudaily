@@ -61,7 +61,7 @@
 			var swiperH = new Swiper('.swiper-container-h', {
 				paginationClickable: true,
 				spaceBetween: 0,
-				onSlideChangeEnd: function(swiper){
+				onSlideChangeStart: function(swiper){
 					console.log("OVER");
 					console.log(that.curdate);
 					
