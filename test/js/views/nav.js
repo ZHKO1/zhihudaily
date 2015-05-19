@@ -56,7 +56,7 @@
 			//	Backbone.swiperH.removeSlide([0, 2]);
 			}
 			
-			that.index_div = document.getElementsByTagName("body")[0].children[0].children[0].children[0].children[1];
+			that.index_div = document.getElementsByTagName("body")[0].children[0].children[0].children[0].children[1].children[0];
 			Backbone.swipering_number = that.datetoString(that.curdate);
 			that.index_div.id = "content" + Backbone.swipering_number;
 			

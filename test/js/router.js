@@ -38,7 +38,14 @@
 						
 					}
 					else{
-						newsView.setElement("#content" + year + month + day);
+						//这里是没有Hash的直接登录
+						if(year == null && month == null && day == null){
+							var date = new Date();
+						}
+						else{
+							var date = new Date(year,month-1,day);
+						}
+						newsView.setElement("#content" + that.datetoString(date));
 						newsView.render(year, month, day);
 					}					
 				});
