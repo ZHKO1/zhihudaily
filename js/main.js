@@ -13,6 +13,9 @@ require.config({
       'http://cdn.staticfile.org/backbone.js/1.1.2/backbone-min',
       'vendor/backbone-1.1.2.min'
     ],
+	'swiper': [
+      'vendor/swiper.min'
+    ],
     'then': 'vendor/then-0.1.0.min',
     'text': 'vendor/text'
   }
