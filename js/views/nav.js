@@ -65,7 +65,11 @@
 			Backbone.swiperH = new Swiper('.swiper-container-h', {
 				paginationClickable: true,
 				spaceBetween: 0,
+				onSlideChangeStart: function(swiper){
+					swiper.detachEvents();
+				},
 				onSlideChangeEnd: function(swiper){
+					swiper.attachEvents();
 					console.log("OVER");
 					console.log(that.curdate);
 					
