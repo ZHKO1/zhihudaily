@@ -9,10 +9,9 @@ isayme大神的zhihudaily（backbone + jquery + require + underscore + then）
 
 仅此而已
 不过也有遗留历史问题
- 1.以iphone为例 触摸滑行历史后退功能和我的操作方式重合 简直蛋疼
- 2.快速滑动直接出bug 必须等下一页请求成功再滑动
- 3.没时间去尝试解决爬下单个news的具体内容 否则就完整了。
- 4.代码太翔了，我自己打赌我几个月后再看自己的代码都看不懂，设计模式啊设计模式
+ 1.以IOS safari浏览器为例 触摸滑行历史后退功能和我的操作方式重合 简直蛋疼
+ 2.没时间去尝试解决爬下单个news的具体内容 否则就完整了。
+ 3.代码太翔了，我自己打赌我几个月后再看自己的代码都看不懂，设计模式啊设计模式
  
  
 为了防止上述第三点，就先记录一下思路
@@ -26,3 +25,48 @@ isayme大神的zhihudaily（backbone + jquery + require + underscore + then）
  8.注意Hash的牵一发而动全身
 
  嗯 差不多了 我后面还会完善的 如今先做到这里
+ 
+ ======================================================
+ 论文
+ 题目：微信微网站前台开发
+ 三个关键词 微信 小规模网站 前端
+ 
+一.微信
+1.微信WEBAPP的优缺点
+2.微信WEBAPP的入口也就是链接方法
+http://mobile.51cto.com/others-388446.htm?utm_source=tuicool
+3.微信WEBAPP在html5端的优势还是在于轻量级营销页面的传播性
+
+扩展：HTML5带给微信的机遇机会 微信给HTML5带来的平台和舞台
+
+
+二.前端
+http://www.doc88.com/p-2082994203323.html
+1.WEB网站系统概述(WEB演变 WEB前端作用 前端性能)
+2.HTTP原理机制（这里我看看能不能忽悠过去）
+3.前端优化
+	（减少HTTP请求数量 以及合并图片或者脚本样式表）
+	（客户端缓存？）
+	（压缩）
+	（界面元素优化）
+	（脚本放在底部）
+	（重定向）
+	（Ajax优化）
+
+再看看我所用项目的技术点
+1.jquery.js 
+2.underscore.js
+3.require.js
+4.backbone.js
+5.then.js
+
+可以说的地方：
+backbone的百科
+http://www.zhihu.com/question/19720745
+backbone体现MVC的哲学
+对于 Bootstrap 框架的补充和介绍
+require.js
+对于JS模块化的思考
+AMD规范
+
+剩下来 看看《单页WEB应用》试试看
