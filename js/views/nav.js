@@ -44,6 +44,7 @@
 
 	routeChanged: function(year, month, day) {
 		var that = this;
+		that.swiperlock = false;
 		date = new Date(year, month - 1, day);
 		if (!_.isNaN(date.getTime())) {
 			this.curdate = date;
@@ -65,29 +66,38 @@
 			Backbone.swiperH = new Swiper('.swiper-container-h', {
 				paginationClickable: true,
 				spaceBetween: 0,
+				onInit: function(swiper){
+			    	$('body').keydown(function(e) {
+				        if(e.which == 37) { // left keypress
+				        	if(!that.swiperlock)
+				           	swiper.slidePrev();
+				        } else if(e.which == 39) { // right keypress
+				           	if(!that.swiperlock)
+				           	swiper.slideNext();
+				        }
+			      	});
+			    },
+
 				onSlideChangeStart: function(swiper){
 					swiper.detachEvents();
+					that.swiperlock = true;
 				},
 				onSlideChangeEnd: function(swiper){
 					swiper.attachEvents();
-					console.log("OVER");
-					console.log(that.curdate);
+					that.swiperlock = false;
+				
+					//console.log("OVER");
+					//console.log(that.curdate);
 					
 					Backbone.swipering = true;
 					Backbone.swipering_number = that.datetoString(that.curdate);
 					
 					if(lastnumber > swiper.translate){
-						$('.prev').trigger('click');
-						var  predate = new Date(that.curdate);
-						predate.setDate(that.curdate.getDate() + 1);
-						predate = that.datetoString(predate);
-						
-						if(!$("#content" + predate).length){
-							swiper.appendSlide(that.template({row_id:'content' + predate}));
-						}
-						swiper.removeSlide(0);
+						that.todateswiper(swiper,1);
 					}
 					else{
+						that.todateswiper(swiper,-1);
+						/*
 						$('.next').trigger('click');
 						var  nextdate = new Date(that.curdate);
 						nextdate.setDate(that.curdate.getDate() - 1);
@@ -97,6 +107,7 @@
 							swiper.prependSlide(that.template({row_id:'content' + nextdate}));
 						}
 						swiper.removeSlide(3);
+						*/
 					}
 					lastnumber = swiper.translate;
 					
@@ -125,6 +136,31 @@
 		
 	},
 	
+	todateswiper:function(swiper,date){
+		var that = this;
+		var  nextdate = new Date(that.curdate);
+		if(date == 1){
+			$('.prev').trigger('click');
+		}
+		else{
+			$('.next').trigger('click');
+		}
+		nextdate.setDate(that.curdate.getDate() + date);
+		
+		nextdate = that.datetoString(nextdate);
+		
+		if(!$("#content" + date).length){
+			if(date == 1){
+				swiper.appendSlide(that.template({row_id:'content' + nextdate}));	
+				swiper.removeSlide(0);
+			}
+			if(date == -1){
+				swiper.prependSlide(that.template({row_id:'content' + nextdate}));
+				swiper.removeSlide(3);
+			}
+		}
+	},
+
 	navigateDay: function(th) {
 		var date = new Date(this.curdate);
 		date.setDate(date.getDate() + th);
