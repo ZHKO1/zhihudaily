@@ -20,7 +20,7 @@ define([
     updateNews: function(collection) {
 		var that = this;
 		setTimeout(function(){
-			that.$el.html('');
+      that.$el.html('');
 			for (var i = 0, l = collection.length; i < l; i++) {
 				var model = collection.at(i);
 				model.attributes.thumbnail = model.attributes.thumbnail + "?imageView2/1/w/240/q/30";

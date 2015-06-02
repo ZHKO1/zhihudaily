@@ -51,7 +51,7 @@
 		}
 
 		if(!Backbone.swipering){
-			console.log("由router:new事件发动");
+			//console.log("由router:new事件发动");
 			if(typeof(Backbone.swiperH) != "undefined"){
 			//	console.log("此时开始清掉多余的两页");
 			//	Backbone.swiperH.removeSlide([0, 2]);
@@ -145,11 +145,9 @@
 		else{
 			$('.next').trigger('click');
 		}
-		nextdate.setDate(that.curdate.getDate() + date);
-		
+		nextdate.setDate(nextdate.getDate() + date * 2);
 		nextdate = that.datetoString(nextdate);
-		
-		if(!$("#content" + date).length){
+		if(!$("#content" + nextdate).length){
 			if(date == 1){
 				swiper.appendSlide(that.template({row_id:'content' + nextdate}));	
 				swiper.removeSlide(0);
@@ -174,19 +172,19 @@
 		//this.listenTo(router, 'route:news', this.routeChanged);
 		//那么剩下来负责跳转的就是router.navigate(route, {trigger: true});这段代码
 		//这段代码有什么用？
-		console.log("navigateDay-function:" + route);
+		//console.log("navigateDay-function:" + route);
 		
 		Backbone.swipering_ = true;
 		router.navigate(route, {trigger: true});
 	},
 	
 	prevDay: function() {
-		console.log("prevDate");
+		//console.log("prevDate");
 		this.navigateDay(1);
 	},
 	
 	nextDay: function() {
-		console.log("nextDate");
+		//console.log("nextDate");
 		this.navigateDay(-1);
 	}
   });

@@ -30,8 +30,8 @@
 						newsView.setElement("#content" + year + month + day);
 						if($("#content" + year + month + day).length){
 								if($("#content" + year + month + day)[0].children.length == 1){
-								console.log($("#content" + year + month + day)[0].children);
-								console.log($("#content" + year + month + day)[0].children.length);
+								//console.log($("#content" + year + month + day)[0].children);
+								//console.log($("#content" + year + month + day)[0].children.length);
 								newsView.render(year, month, day);
 							}
 						}
