@@ -1,10 +1,8 @@
-//Over~
 define([
   'jquery',
   'underscore',
   'backbone'
 ], function($, _, Backbone) {
-  //嵌套最深的一个模块
   var NewsModel = Backbone.Model.extend({
     defaults: {
       image: '',

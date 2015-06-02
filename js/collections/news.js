@@ -1,27 +1,22 @@
-//Over~
 define([
   'jquery',
   'underscore',
   'backbone',
   'models/news'
 ], function($, _, Backbone, NewsModel) {
-  //要先加载models的news
   var NewsCollection = Backbone.Collection.extend({
     model: NewsModel,
 
-    url: function(year, month, day) { //准备好要发起七牛请求的url
+    url: function(year, month, day) {
       var _url = 'http://7xin0n.com1.z0.glb.clouddn.com/api/2/news/';
       return _url + this.dateFormat(year, month, day);
     },
 	
-    //每一次调用 fetch 从服务器拉取集合的模型数据时，parse都会被调用。 本函数接收原始 response 对象，返回可以 added（添加） 到集合的模型属性数组
     parse: function(resp) {
       if (!resp || !resp.news) {
         return [];
       }
-
       this.trigger('date:changed', resp.display_date);
-      
       for (var i = 0; i < resp.news.length; i++) {
         var thumbnail = resp.news[i].image;
 
@@ -46,7 +41,6 @@ define([
 
       if (!_.isNaN(d.getTime())) {
         date.setDate(date.getDate() + 1);
-        // date is today, return lastet data.
         if (date.toLocaleDateString() !== d.toLocaleDateString()) {
           format = 'before/' + this.dateToStr(d) + '.json';
         }

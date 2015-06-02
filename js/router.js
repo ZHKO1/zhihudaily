@@ -6,19 +6,12 @@
 
   var Router = Backbone.Router.extend({
     routes: {
-		//括号里表示可有可无
 		'(!/)': 'news',
 		'(!/)news/:year/:month/:day': 'news',
 		'*defAction': 'defAction'
 	},
 	
     news: function(year, month, day) {
-			// 如何判定这个事件是滑动引发的还是Hash直接修改的？
-			// 在nav.js里的navigateDay函数加个参数判断？
-			// 感觉很蠢....但是事到如今也没别的办法了
-			// 不作死就不会死 我已经混乱了
-			// 毕竟不会设计模式的硬伤
-			// 我自己都不知道swipering_和swipering都是什么作用
 			var that = this;
 			if(Backbone.swipering_){
 				Backbone.swipering_ = false;
