@@ -1,72 +1,27 @@
-´ËÏîÄ¿Ö÷Òª²Î¿¼
-isayme´óÉñµÄzhihudaily£¨backbone + jquery + require + underscore + then£©
-ÔÙ´Î¸ÐÐ»isaymeµÄ·ÖÏí
+æ­¤é¡¹ç›®ä¸»è¦å‚è€ƒ
+isaymeå¤§ç¥žçš„zhihudailyï¼ˆbackbone + jquery + require + underscore + thenï¼‰
+å†æ¬¡æ„Ÿè°¢isaymeçš„åˆ†äº«
 
-¶øÎÒÔÚisaymeµÄ»ù´¡ÉÏÌí¼ÓÁË
- 1.´¥Ãþ»¬¶¯·­Ò³µÄ¹¦ÄÜ,×ó·­Ç°Ò»Ìì£¬ÓÒ·­ºóÒ»Ìì
- 2.Ö±½ÓÐÞ¸ÄHash(Ò²¾ÍÊÇ"index.html#!/news/2015/4/18"#ºóÃæµÄ²¿·Ö)À´Ö±½Ó¶¨Î»
- 3.±ÜÃâ·´¸´¼ÓÔØ
+è€Œæˆ‘åœ¨isaymeçš„åŸºç¡€ä¸Šæ·»åŠ äº†
+ 1.è§¦æ‘¸æ»‘åŠ¨ç¿»é¡µçš„åŠŸèƒ½,å·¦ç¿»å‰ä¸€å¤©ï¼Œå³ç¿»åŽä¸€å¤©.å½“ç„¶é”®ç›˜æ“ä½œçš„åŠŸèƒ½è¿˜æ˜¯ä¿ç•™ç€çš„
+ 2.ç›´æŽ¥ä¿®æ”¹Hash(ä¹Ÿå°±æ˜¯"index.html#!/news/2015/4/18"#åŽé¢çš„éƒ¨åˆ†)æ¥ç›´æŽ¥å®šä½
+ 3.é¿å…åå¤åŠ è½½
 
-½ö´Ë¶øÒÑ
-²»¹ýÒ²ÓÐÒÅÁôÀúÊ·ÎÊÌâ
- 1.ÒÔIOS safariä¯ÀÀÆ÷ÎªÀý ´¥Ãþ»¬ÐÐÀúÊ·ºóÍË¹¦ÄÜºÍÎÒµÄ²Ù×÷·½Ê½ÖØºÏ ¼òÖ±µ°ÌÛ
- 2.Ã»Ê±¼äÈ¥³¢ÊÔ½â¾öÅÀÏÂµ¥¸önewsµÄ¾ßÌåÄÚÈÝ ·ñÔò¾ÍÍêÕûÁË¡£
- 3.´úÂëÌ«ÏèÁË£¬ÎÒ×Ô¼º´ò¶ÄÎÒ¼¸¸öÔÂºóÔÙ¿´×Ô¼ºµÄ´úÂë¶¼¿´²»¶®£¬Éè¼ÆÄ£Ê½°¡Éè¼ÆÄ£Ê½
+ä»…æ­¤è€Œå·²
+ä¸è¿‡ä¹Ÿæœ‰é—ç•™åŽ†å²é—®é¢˜
+ 1.ä»¥IOS safariæµè§ˆå™¨ä¸ºä¾‹ è§¦æ‘¸æ»‘è¡ŒåŽ†å²åŽé€€åŠŸèƒ½å’Œæˆ‘çš„æ“ä½œæ–¹å¼é‡åˆ ç®€ç›´è›‹ç–¼
+ 2.æ²¡æ—¶é—´åŽ»å°è¯•è§£å†³çˆ¬ä¸‹å•ä¸ªnewsçš„å…·ä½“å†…å®¹ å¦åˆ™å°±å®Œæ•´äº†ã€‚
+ 3.ä»£ç å¤ªç¿”äº†ï¼Œæˆ‘è‡ªå·±æ‰“èµŒæˆ‘å‡ ä¸ªæœˆåŽå†çœ‹è‡ªå·±çš„ä»£ç éƒ½çœ‹ä¸æ‡‚ï¼Œè®¾è®¡æ¨¡å¼å•Šè®¾è®¡æ¨¡å¼
  
  
-ÎªÁË·ÀÖ¹ÉÏÊöµÚÈýµã£¬¾ÍÏÈ¼ÇÂ¼Ò»ÏÂË¼Â·
- 1.´óÖÂ¿´Ã÷°×backbone¿ò¼ÜÊÇ¸öÊ²Ã´ÍæÒâ¶ù
- 2.³¢ÊÔÓÃrequire.jsÀ´¼ÓÔØswiper.js
- 3.¹Ì¶¨ÈýÒ³À´²âÊÔswiper.jsÄÜ¹»ÔËÐÐ
- 4.³¢ÊÔÔÚ¿Õ°×Ò³ÉÏ¼ÓÔØÇëÇó³É¹¦ÐÅÏ¢ Ã¿¸ö¿Õ°×Ò³¶¼ÓÉ×Ô¼ºµÄÊ±¼ä×÷ÎªidÀ´×¢Ã÷
- 5.´¥Ãþ²Ù×÷Ò³Ãæ ²å½ø É¾³ýÒ³Ãæ À´±£Ö¤ÎÞÂÛºÎÊ±¶¼ÊÇÓÐÈýÒ³
- 6.²»Í¬JSÐèÒª½»»¥ ÎÒÕâÀï¾Í¿ªÊ¼±äµÃ¸úÏèÒ»Ñù Ö±½ÓÓÃÈ«¾Ö²ÎÊýÀ´½»»¥
- 7.³¢ÊÔÓÅ»¯Ñ¹ËõÍ¼Æ¬ ËùÐÒÆßÅ£Ö§³ÖÍ¼Æ¬Ñ¹Ëõ ºóÀ´Ò²²»ÖªµÀÊÇ²»ÊÇ´í¾õ ËÆºõ»¹ÕæÁ÷³©ÁËÒ»µã
- 8.×¢ÒâHashµÄÇ£Ò»·¢¶ø¶¯È«Éí
+ä¸ºäº†é˜²æ­¢ä¸Šè¿°ç¬¬ä¸‰ç‚¹ï¼Œå°±å…ˆè®°å½•ä¸€ä¸‹æ€è·¯
+ 1.å¤§è‡´çœ‹æ˜Žç™½backboneæ¡†æž¶æ˜¯ä¸ªä»€ä¹ˆçŽ©æ„å„¿
+ 2.å°è¯•ç”¨require.jsæ¥åŠ è½½swiper.js
+ 3.å›ºå®šä¸‰é¡µæ¥æµ‹è¯•swiper.jsèƒ½å¤Ÿè¿è¡Œ
+ 4.å°è¯•åœ¨ç©ºç™½é¡µä¸ŠåŠ è½½è¯·æ±‚æˆåŠŸä¿¡æ¯ æ¯ä¸ªç©ºç™½é¡µéƒ½ç”±è‡ªå·±çš„æ—¶é—´ä½œä¸ºidæ¥æ³¨æ˜Ž
+ 5.è§¦æ‘¸æ“ä½œé¡µé¢ æ’è¿› åˆ é™¤é¡µé¢ æ¥ä¿è¯æ— è®ºä½•æ—¶éƒ½æ˜¯æœ‰ä¸‰é¡µ
+ 6.ä¸åŒJSéœ€è¦äº¤äº’ æˆ‘è¿™é‡Œå°±å¼€å§‹å˜å¾—è·Ÿç¿”ä¸€æ · ç›´æŽ¥ç”¨å…¨å±€å‚æ•°æ¥äº¤äº’
+ 7.å°è¯•ä¼˜åŒ–åŽ‹ç¼©å›¾ç‰‡ æ‰€å¹¸ä¸ƒç‰›æ”¯æŒå›¾ç‰‡åŽ‹ç¼© åŽæ¥ä¹Ÿä¸çŸ¥é“æ˜¯ä¸æ˜¯é”™è§‰ ä¼¼ä¹Žè¿˜çœŸæµç•…äº†ä¸€ç‚¹
+ 8.æ³¨æ„Hashçš„ç‰µä¸€å‘è€ŒåŠ¨å…¨èº«
 
- àÅ ²î²»¶àÁË ÎÒºóÃæ»¹»áÍêÉÆµÄ Èç½ñÏÈ×öµ½ÕâÀï
- 
- ======================================================
- ÂÛÎÄ
- ÌâÄ¿£ºÎ¢ÐÅÎ¢ÍøÕ¾Ç°Ì¨¿ª·¢
- Èý¸ö¹Ø¼ü´Ê Î¢ÐÅ Ð¡¹æÄ£ÍøÕ¾ Ç°¶Ë
- 
-Ò».Î¢ÐÅ
-1.Î¢ÐÅWEBAPPµÄÓÅÈ±µã
-2.Î¢ÐÅWEBAPPµÄÈë¿ÚÒ²¾ÍÊÇÁ´½Ó·½·¨
-http://mobile.51cto.com/others-388446.htm?utm_source=tuicool
-3.Î¢ÐÅWEBAPPÔÚhtml5¶ËµÄÓÅÊÆ»¹ÊÇÔÚÓÚÇáÁ¿¼¶ÓªÏúÒ³ÃæµÄ´«²¥ÐÔ
-
-À©Õ¹£ºHTML5´ø¸øÎ¢ÐÅµÄ»úÓö»ú»á Î¢ÐÅ¸øHTML5´øÀ´µÄÆ½Ì¨ºÍÎèÌ¨
-
-
-¶þ.Ç°¶Ë
-http://www.doc88.com/p-2082994203323.html
-1.WEBÍøÕ¾ÏµÍ³¸ÅÊö(WEBÑÝ±ä WEBÇ°¶Ë×÷ÓÃ Ç°¶ËÐÔÄÜ)
-2.HTTPÔ­Àí»úÖÆ£¨ÕâÀïÎÒ¿´¿´ÄÜ²»ÄÜºöÓÆ¹ýÈ¥£©
-3.Ç°¶ËÓÅ»¯
-	£¨¼õÉÙHTTPÇëÇóÊýÁ¿ ÒÔ¼°ºÏ²¢Í¼Æ¬»òÕß½Å±¾ÑùÊ½±í£©
-	£¨¿Í»§¶Ë»º´æ£¿£©
-	£¨Ñ¹Ëõ£©
-	£¨½çÃæÔªËØÓÅ»¯£©
-	£¨½Å±¾·ÅÔÚµ×²¿£©
-	£¨ÖØ¶¨Ïò£©
-	£¨AjaxÓÅ»¯£©
-
-ÔÙ¿´¿´ÎÒËùÓÃÏîÄ¿µÄ¼¼Êõµã
-1.jquery.js 
-2.underscore.js
-3.require.js
-4.backbone.js
-5.then.js
-
-¿ÉÒÔËµµÄµØ·½£º
-backboneµÄ°Ù¿Æ
-http://www.zhihu.com/question/19720745
-backboneÌåÏÖMVCµÄÕÜÑ§
-¶ÔÓÚ Bootstrap ¿ò¼ÜµÄ²¹³äºÍ½éÉÜ
-require.js
-¶ÔÓÚJSÄ£¿é»¯µÄË¼¿¼
-AMD¹æ·¶
-
-Ê£ÏÂÀ´ ¿´¿´¡¶µ¥Ò³WEBÓ¦ÓÃ¡·ÊÔÊÔ¿´
+ å—¯ å·®ä¸å¤šäº† æˆ‘åŽé¢è¿˜ä¼šå®Œå–„çš„ å¦‚ä»Šå…ˆåšåˆ°è¿™é‡Œ
