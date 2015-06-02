@@ -19,19 +19,15 @@
 					'views/news'
 				], function(newsView) {
 					if(Backbone.swipering){
-						//如果已经滑动过了 就根据目标DIV里是loading还是已经加载过的避免重复的网络请求。
 						newsView.setElement("#content" + year + month + day);
 						if($("#content" + year + month + day).length){
 								if($("#content" + year + month + day)[0].children.length == 1){
-								//console.log($("#content" + year + month + day)[0].children);
-								//console.log($("#content" + year + month + day)[0].children.length);
 								newsView.render(year, month, day);
 							}
 						}
 						
 					}
 					else{
-						//这里是没有Hash的直接登录
 						if(year == null && month == null && day == null){
 							var date = new Date();
 						}
@@ -44,7 +40,6 @@
 				});
 			}
 			else{
-				//这里是改变Hash的关键
 				require([
 					'views/news'
 				], function(newsView) {
